@@ -31,10 +31,12 @@ function addAutoClicker() {
     document.getElementById("auto-clickers").innerHTML = Math.floor(autoClickers);
 }
 
+// Fungsi untuk menambah cabang
 function addCabang() {
     cabang++;
     document.getElementById("income-multipliers").innerHTML = Math.floor(cabang);
 }
+
 // Fungsi untuk membeli upgrade
 function buyUpgrade(cost, upgrade) {
     if (isUpgradePurchased(upgrade)) {
@@ -88,8 +90,8 @@ function buyAutoClick(cost) {
         document.getElementById("money").innerHTML = Math.floor(money);
         addAutoClicker();
         activateAutoClick();
-        autoClickCost *= 1.25; // double the auto-click cost after adding an auto-clicker
-        document.getElementById("auto-click-cost").innerHTML = Math.floor(autoClickCost); // update the cost display
+        autoClickCost *= 1.5;
+        document.getElementById("auto-click-cost").innerHTML = Math.floor(autoClickCost);
     } else {
         document.getElementById("warning").style.display = "block";
     }
@@ -101,8 +103,8 @@ function buyCabang(cost) {
         money -= cost;
         document.getElementById("money").innerHTML = Math.floor(money);
         addCabang();
-        cabangCost *= 2.5; // quad the cabang cost after adding an cabang
-        document.getElementById("income-multiplier-cost").innerHTML = Math.floor(cabangCost); // update the cost display
+        cabangCost *= 2.5;
+        document.getElementById("income-multiplier-cost").innerHTML = Math.floor(cabangCost);
         moneyValue= 2+moneyValue;
     } else {
         document.getElementById("warning").style.display = "block";
@@ -159,14 +161,16 @@ document.getElementById("about-us").addEventListener("click", function() {
     document.getElementById("about-us-modal").style.display = "block";
 });
 
-// Event listener untuk menutup peringatan
+// Event listener untuk menutup peringatan Warning
 document.getElementById("close-warning").addEventListener("click", function() {
     document.getElementById("warning").style.display = "none";
 });
 
+// Event listener untuk menutup peringatan Bought
 document.getElementById("close-bought").addEventListener("click", function() {
     document.getElementById("bought").style.display = "none";
 });
+
 // Event listener untuk menutup halaman About Us
 document.getElementById("close-about-us").addEventListener("click", function() {
     document.getElementById("about-us-modal").style.display = "none";
@@ -174,9 +178,8 @@ document.getElementById("close-about-us").addEventListener("click", function() {
 
 // Event listener untuk mengaktifkan auto-click
 document.getElementById("main-game").addEventListener("click", function() {
-    activateAutoClick(); // activate auto-click when the user clicks on the main game area
+    activateAutoClick();
 });
-
 
 // Update cost upgrade dan auto-click
 document.getElementById("upgrade1-cost").innerHTML = upgrade1Cost;
