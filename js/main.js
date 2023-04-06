@@ -181,6 +181,11 @@ document.getElementById("main-game").addEventListener("click", function() {
     activateAutoClick();
 });
 
+  function playSound() {
+    var sfx = document.getElementById("sfx");
+    sfx.play();
+  }
+
 // Update cost upgrade dan auto-click
 document.getElementById("upgrade1-cost").innerHTML = upgrade1Cost;
 document.getElementById("upgrade2-cost").innerHTML = upgrade2Cost;
