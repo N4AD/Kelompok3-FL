@@ -3,7 +3,7 @@ Habil Putra Wardana (00000073909) (habil.putra@student.umn.ac.id, Informatika)
 Rifqi Arief Wicaksana (00000073943) (rifqi.arief1@student.umn.ac.id, Informatika)
 
 GitHub Link:
-https://github.com/N4AD/ProjectUTSLab.git
+https://github.com/N4AD/Kelompok3-FL.git
 
 Gameplay Note:
 - Seperti game idle clicker yang ada, di klik icon yang ada di dalam game (Mobil Tahu Bulat)
